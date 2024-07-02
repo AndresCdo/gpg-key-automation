@@ -33,15 +33,34 @@ Before running the script, ensure you have the following installed on your syste
     cd gpg-key-automation
     ```
 
-3. **Run the Script**
+3. **Prepare the Key Parameters**
+
+Edit the keyparams.txt file to specify your key parameters, such as your name and email. Leave the passphrase field empty; the script will generate one for you.
+
+4. **Run the Script**
 
    ```bash
+   chmod +x git_signing_key.sh
    bash git_signing_key.sh
    ```
 
-4. **Follow the On-Screen Instructions**
+5. **Follow the On-Screen Instructions**
 
     The script will guide you through the process of setting up your GPG key and integrating it with your GitHub account.
+
+## How It Works
+
+- The script first checks for the required dependencies and ensures gpg-agent is running.
+- It generates a secure passphrase and updates keyparams.txt with it.
+- A GPG key is generated using the parameters from keyparams.txt.
+- Git is configured to use the new GPG key for commit and tag signing.
+The GPG public key is exported and uploaded to the user's GitHub account.
+- Finally, gpg-agent is restarted to apply the changes.
+
+## Contributing
+
+Contributions to improve the script or documentation are welcome. Please feel free to submit a pull request or open an issue if you have suggestions or encounter problems.
+
 
 ## License
 
