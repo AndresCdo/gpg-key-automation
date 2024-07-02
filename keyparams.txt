@@ -1,0 +1,8 @@
+Key-Type: RSA
+Key-Length: 2048
+Subkey-Type: RSA
+Subkey-Length: 2048
+Name-Real: your-name
+Name-Email: your-email@domain.com
+Expire-Date: 0
+Passphrase: R6gPmTnNDQMRAByXLAx7tl96CGGXZNMHm9/WyxXDAT0=
